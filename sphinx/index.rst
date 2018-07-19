@@ -12,6 +12,11 @@ Welcome to SALMON Manual's documentation!
 
 
 
+   install_and_run.rst
+   input_variables.rst
+   
+   
+
 Indices and tables
 ==================
 
