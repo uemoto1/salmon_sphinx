@@ -12,10 +12,10 @@ beginning, taking a few samples that cover applications of SALMON in
 several directions. We assume that you are in the computational
 environment of UNIX/Linux OS. First you need to download and install
 SALMON in your computational environment. If you have not yet done it,
-do it following the instruction, `download <download>`__ and `Install
-and Run <Install_and_Run>`__.
+do it following the instruction, `download <download and `Install
+and Run <Install_and_Run.
 
-As described in `Install and Run <Install_and_Run>`__, you are required
+As described in `Install and Run <Install_and_Run, you are required
 to prepare at least an input file and pseudopotential files to run
 SALMON. In the following, we present input files for several sample
 calculations and provide a brief explanation of the namelist variables
@@ -31,13 +31,13 @@ acetylene C2H2. If you are interested in learning electron dynamics
 calculations in isolated systems, please look into these exercises. In
 SALMON, we usually calculate the ground state solution first. This is
 illustrated in
-`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule>`__. After
+`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule. After
 finishing the ground state calculation, two exercises of electron
 dynamics calculations are prepared.
-`Exercise-2 <#Exercise-2:_Polarizability_and_photoabsorption_of_C2H2_molecule>`__
+`Exercise-2 <#Exercise-2:_Polarizability_and_photoabsorption_of_C2H2_molecule
 illustrates the calculation of linear optical responses in real time,
 obtaining polarizability and photoabsorption of the molecule.
-`Exercise-3 <#Exercise-3:_Electron_dynamics_in_C2H2_molecule_under_a_pulsed_electric_field>`__
+`Exercise-3 <#Exercise-3:_Electron_dynamics_in_C2H2_molecule_under_a_pulsed_electric_field
 illustrates the calculation of electron dynamics in the molecule under a
 pulsed electric field.
 
@@ -49,10 +49,10 @@ computationally expensive and a time evolution calculation is usually
 much more time-consuming than the ground state calculation, we recommend
 to run the ground and the time evolution calculations as a single job.
 The following two exercises are organized in that way.
-`Exercise-4 <#Exercise-4:_Dielectric_function_of_crystalline_silicon>`__
+`Exercise-4 <#Exercise-4:_Dielectric_function_of_crystalline_silicon
 illustrates the calculation of linear response properties of crystalline
 silicon to obtain the dielectric function.
-`Exercise-5 <#Exercise-5:_Electron_dynamics_in_crystalline_silicon_under_a_pulsed_electric_field>`__
+`Exercise-5 <#Exercise-5:_Electron_dynamics_in_crystalline_silicon_under_a_pulsed_electric_field
 illustrates the calculation of electron dynamics in the crystalline
 silicon induced by a pulsed electric field.
 
@@ -61,7 +61,7 @@ of a pulsed light in a bulk silicon, coupling Maxwell equations for the
 electromagnetic fields of the pulsed light and the electron dynamics in
 the unit cells. This calculation is quite time-consuming and is
 recommended to execute using massively parallel supercomputers.
-`Exercise-6 <#Exercise-6:_Pulsed-light_propagation_through_a_silicon_thin_film>`__
+`Exercise-6 <#Exercise-6:_Pulsed-light_propagation_through_a_silicon_thin_film
 illustrates the calculation of a pulsed, linearly polarized light
 irradiating normally on a surface of a bulk silicon.
 
@@ -100,13 +100,13 @@ To run the code, following files are used:
 
 You may download the above 3 files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:C2H2_gs_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:C2H2_gs_input.zip
 
 In the input file *C2H2_gs.inp*, namelists variables are specified. Most
 of them are mandatory to execute the ground state calculation. We
 present their explanations below:
 
-```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(ground``\ ````\ ``state``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_input_files_(ground_state_of_C2H2_molecule)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(ground``\ ````\ ``state``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_input_files_(ground_state_of_C2H2_molecule)
 
 This will help you to prepare an input file for other systems that you
 want to calculate. A complete list of the namelist variables that can be
@@ -143,16 +143,14 @@ directory that you run the code,
 You may download the above files (zipped file, except for the binary
 file *C2H2_gs.bin*) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:C2H2_gs_output.zip>`__
+https://salmon-tddft.jp/wiki/media:C2H2_gs_output.zip
 
 Main results of the calculation such as orbital energies are included in
 *C2H2_info.data*. Explanations of the *C2H2_info.data* and other output
 files are described in:
 
-```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(ground``\ ````\ ``state``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_output_files_(ground_state_of_C2H2_molecule)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(ground``\ ````\ ``state``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_output_files_(ground_state_of_C2H2_molecule)
 
-Images
-^^^^^^
 
 We show several image that are created from the output files.
 
@@ -161,13 +159,13 @@ We show several image that are created from the output files.
 +-----------------------------------+-----------------------------------+
 | `highest occupied molecular       | *psi1.cube*, *psi2.cube*, ...     |
 | orbital                           |                                   |
-| (HOMO) <:File:HOMO.png#file>`__   |                                   |
+| (HOMO) <:File:HOMO.png#file   |                                   |
 +-----------------------------------+-----------------------------------+
 | `electron                         | *dns.cube*                        |
-| density <:File:Dns.png#file>`__   |                                   |
+| density <:File:Dns.png#file   |                                   |
 +-----------------------------------+-----------------------------------+
 | `electron localization            | *elf.cube*                        |
-| function <:File:Elf.png#file>`__  |                                   |
+| function <:File:Elf.png#file  |                                   |
 +-----------------------------------+-----------------------------------+
 
 Exercise-2: Polarizability and photoabsorption of C2H2 molecule
@@ -179,7 +177,7 @@ equation. The linear response calculation provides the polarizability
 and the oscillator strength distribution of the molecule. This exercise
 should be carried out after finishing the ground state calculation that
 was explained in
-`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule>`__. In the
+`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule. In the
 calculation, an impulsive perturbation is applied to all electrons in
 the C2H2 molecule along the molecular axis which we take *z* axis. Then
 a time evolution calculation is carried out without any external fields.
@@ -218,13 +216,13 @@ state calculation.
 
 You may download the *C2H2_rt_response.inp* file (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``file`` <media:C2H2_rt_response_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``file`` <media:C2H2_rt_response_input.zip
 
 In the input file *C2H2_rt_response.inp*, namelists variables are
 specified. Most of them are mandatory to execute the linear response
 calculation. We present their explanations below:
 
-```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(polarizability``\ ````\ ``and``\ ````\ ``photoabsorption``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_input_files_(polarizability_and_photoabsorption_of_C2H2_molecule)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(polarizability``\ ````\ ``and``\ ````\ ``photoabsorption``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_input_files_(polarizability_and_photoabsorption_of_C2H2_molecule)
 
 This will help you to prepare the input file for other systems that you
 want to calculate. A complete list of the namelist variables that can be
@@ -252,11 +250,11 @@ directory that you run the code,
 
 You may download the above files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:C2H2_rt_response_output.zip>`__
+https://salmon-tddft.jp/wiki/media:C2H2_rt_response_output.zip
 
 Explanations of the output files are given in:
 
-```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(polarizability``\ ````\ ``and``\ ````\ ``photoabsorption``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_output_files_(polarizability_and_photoabsorption_of_C2H2_molecule)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(polarizability``\ ````\ ``and``\ ````\ ``photoabsorption``\ ````\ ``of``\ ````\ ``C2H2``\ ````\ ``molecule)`` <Explanations_of_output_files_(polarizability_and_photoabsorption_of_C2H2_molecule)
 
 Exercise-3: Electron dynamics in C2H2 molecule under a pulsed electric field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -268,7 +266,7 @@ quantities as the total energy and the electric dipole moment of the
 system as functions of time are calculated. This tutorial should be
 carried out after finishing the ground state calculation that was
 explained in
-`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule>`__. In the
+`Exercise-1 <#Exercise-1:_Ground_state_of_C2H2_molecule. In the
 calculation, a pulsed electric field that has cos^2 envelope shape is
 applied. The parameters that characterize the pulsed field such as
 magnitude, frequency, polarization direction, and carrier envelope phase
@@ -302,14 +300,14 @@ users need to prepare.
 
 You may download the *C2H2_rt_pulse.inp* file (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``file`` <media:C2H2_rt_pulse_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``file`` <media:C2H2_rt_pulse_input.zip
 
 In the input file *C2H2_rt_pulse.inp*, namelists variables are
 specified. Most of them are mandatory to execute the calculation of
 electron dynamics induced by a pulsed electric field. We present
 explanations of the namelist variables that appear in the input file in:
 
-```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(C2H2``\ ````\ ``molecule``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanations_of_input_files_(C2H2_molecule_under_a_pulsed_electric_field)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(C2H2``\ ````\ ``molecule``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanations_of_input_files_(C2H2_molecule_under_a_pulsed_electric_field)
 
 This will help you to prepare the input file for other systems and other
 pulsed electric fields that you want to calculate. A complete list of
@@ -338,11 +336,11 @@ directory that you run the code,
 
 You may download the above files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:C2H2_rt_pulse_output.zip>`__
+https://salmon-tddft.jp/wiki/media:C2H2_rt_pulse_output.zip
 
 Explanations of the files are described in:
 
-```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(C2H2``\ ````\ ``molecule``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanations_of_output_files_(C2H2_molecule_under_a_pulsed_electric_field)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(C2H2``\ ````\ ``molecule``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanations_of_output_files_(C2H2_molecule_under_a_pulsed_electric_field)
 
 Crystalline silicon (periodic solids)
 -------------------------------------
@@ -383,14 +381,14 @@ To run the code, following files are used:
 
 You may download the above 2 files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:_Si_gs_rt_response_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:_Si_gs_rt_response_input.zip
 
 In the input file *Si_gs_rt_response.inp*, namelists variables are
 specified. Most of them are mandatory to execute the calculation. We
 present explanations of the namelist variables that appear in the input
 file in:
 
-```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(dielectric``\ ````\ ``function``\ ````\ ``of``\ ````\ ``crystalline``\ ````\ ``silicon)`` <Explanations_of_input_files_(dielectric_function_of_crystalline_silicon)>`__
+```Explanations``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(dielectric``\ ````\ ``function``\ ````\ ``of``\ ````\ ``crystalline``\ ````\ ``silicon)`` <Explanations_of_input_files_(dielectric_function_of_crystalline_silicon)
 
 This will help you to prepare the input file for other systems that you
 want to calculate. A complete list of the namelist variables that can be
@@ -428,11 +426,11 @@ directory that you run the code,
 
 You may download the above files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:Si_gs_rt_response_output.zip>`__
+https://salmon-tddft.jp/wiki/media:Si_gs_rt_response_output.zip
 
 Explanations of the output files are described in:
 
-```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``fiels``\ ````\ ``(dielectric``\ ````\ ``function``\ ````\ ``of``\ ````\ ``crystalline``\ ````\ ``silicon)`` <Explanation_of_output_fiels_(dielectric_function_of_crystalline_silicon)>`__
+```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``fiels``\ ````\ ``(dielectric``\ ````\ ``function``\ ````\ ``of``\ ````\ ``crystalline``\ ````\ ``silicon)`` <Explanation_of_output_fiels_(dielectric_function_of_crystalline_silicon)
 
 Exercise-5: Electron dynamics in crystalline silicon under a pulsed electric field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -466,14 +464,14 @@ To run the code, following files are used:
 
 You may download the above 2 files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:Si_gs_rt_pulse_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:Si_gs_rt_pulse_input.zip
 
 In the input file *Si_gs_rt_pulse.inp*, namelists variables are
 specified. Most of them are mandatory to execute the calculation. We
 present explanations of the namelist variables that appear in the input
 file in:
 
-```Explanation``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(crystalline``\ ````\ ``silicon``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanation_of_input_files_(crystalline_silicon_under_a_pulsed_electric_field)>`__
+```Explanation``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(crystalline``\ ````\ ``silicon``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanation_of_input_files_(crystalline_silicon_under_a_pulsed_electric_field)
 
 This will help you to prepare the input file for other systems that you
 want to calculate. A complete list of the namelist variables that can be
@@ -511,11 +509,11 @@ directory that you run the code,
 
 You may download the above files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:Si_gs_rt_pulse_output.zip>`__
+https://salmon-tddft.jp/wiki/media:Si_gs_rt_pulse_output.zip
 
 Explanations of the output files are described in:
 
-```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(crystalline``\ ````\ ``silicon``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanation_of_output_files_(crystalline_silicon_under_a_pulsed_electric_field)>`__
+```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(crystalline``\ ````\ ``silicon``\ ````\ ``under``\ ````\ ``a``\ ````\ ``pulsed``\ ````\ ``electric``\ ````\ ``field)`` <Explanation_of_output_files_(crystalline_silicon_under_a_pulsed_electric_field)
 
 Maxwell + TDDFT multiscale simulation
 -------------------------------------
@@ -551,14 +549,14 @@ To run the code, following files are used:
 
 You may download the above two files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:_Si_gs_rt_multiscale_input.zip>`__
+```Download``\ ````\ ``zipped``\ ````\ ``input``\ ````\ ``and``\ ````\ ``pseudopotential``\ ````\ ``files`` <media:_Si_gs_rt_multiscale_input.zip
 
 In the input file *Si_gs_rt_multiscale.inp*, namelists variables are
 specified. Most of them are mandatory to execute the calculation. We
 present explanations of the namelist variables that appear in the input
 file in:
 
-```Explanation``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(pulsed-light``\ ````\ ``propagation``\ ````\ ``through``\ ````\ ``a``\ ````\ ``silicon``\ ````\ ``thin``\ ````\ ``film)`` <Explanation_of_input_files_(pulsed-light_propagation_through_a_silicon_thin_film)>`__
+```Explanation``\ ````\ ``of``\ ````\ ``input``\ ````\ ``files``\ ````\ ``(pulsed-light``\ ````\ ``propagation``\ ````\ ``through``\ ````\ ``a``\ ````\ ``silicon``\ ````\ ``thin``\ ````\ ``film)`` <Explanation_of_input_files_(pulsed-light_propagation_through_a_silicon_thin_film)
 
 This will help you to prepare the input file for other systems that you
 want to calculate. A complete list of the namelist variables that can be
@@ -599,8 +597,8 @@ following output files are created in the directory,
 
 You may download the above files (zipped file) from:
 
-```Download``\ ````\ ``zipped``\ ````\ ``output``\ ````\ ``files`` <media:Si_gs_rt_multiscale_output.zip>`__
+https://salmon-tddft.jp/wiki/media:Si_gs_rt_multiscale_output.zip
 
 Explanations of the output files are described in:
 
-```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(pulsed-light``\ ````\ ``propagation``\ ````\ ``through``\ ````\ ``a``\ ````\ ``silicon``\ ````\ ``thin``\ ````\ ``film)`` <Explanation_of_output_files_(pulsed-light_propagation_through_a_silicon_thin_film)>`__
+```Explanation``\ ````\ ``of``\ ````\ ``output``\ ````\ ``files``\ ````\ ``(pulsed-light``\ ````\ ``propagation``\ ````\ ``through``\ ````\ ``a``\ ````\ ``silicon``\ ````\ ``thin``\ ````\ ``film)`` <Explanation_of_output_files_(pulsed-light_propagation_through_a_silicon_thin_film)
