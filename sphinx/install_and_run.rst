@@ -1,5 +1,6 @@
-Install and Run
-=========================================
+###########################
+Getting Started (Install & Run)
+###########################
 
 Prerequisites
 -------------
@@ -190,6 +191,34 @@ single processor machine, specify ``--disable-mpi`` in executing the
 python script:
 
 `` $ python ../configure.py --arch=``\ \ `` --disable-mpi``
+
+To use Libxc
+~~~~~~~~~~~~
+
+In SALMON, you may use Libxc functional library,
+http://www.tddft.org/programs/libxc/installation/. To use the Libxc
+library, some adittional procedures are necessary. First you need to
+download the source files in your system as follows:
+
+::
+
+   wget http://www.tddft.org/programs/octopus/down.php?file=libxc/4.2.1/libxc-4.2.1.tar.gz
+   tar -zxvf libxc-4.2.1.tar.gz
+
+Then, enter the libxc source directory and make the library as follows:
+
+::
+
+   ./configure --prefix=INSTALL/PATH/OF/LIBXC
+   make; make install
+
+Finally, enter the SALMON directory and execute ``configure.py`` script
+specifying the Libxc directory.
+
+::
+
+   configure.py --arch=ARCHITECTURE --prefix=PREFIX --with-libxc=INSTALL/PATH/OF/LIBXC
+   make; make install
 
 Files necessary to run SALMON
 -----------------------------
@@ -391,43 +420,3 @@ environment, and execute the make command:
 
 If the make proceeds successful, a binary file is created in the
 directory ``SALMON/bin/``.
-
-Build with Libxc
-~~~~~~~~~~~~~~~~
-
-You can build with Libxc library by adding the configure script are as
-below:
-
--  ``--enable-libxc``: link the Libxc library (by automatic detection in
-   CMake)
--  ``--with-libxc=INSTALL/PATH/OF/LIBXC``: manually specify the Libxc
-   prefix directory.
-
-Installation of Libxc
-^^^^^^^^^^^^^^^^^^^^^
-
-If you want to use Libxc mode, you must do adittional preparation.
-Download the source-list and install by the
-website(http://www.tddft.org/programs/libxc/installation/):
-
-::
-
-   wget http://www.tddft.org/programs/octopus/down.php?file=libxc/4.2.1/libxc-4.2.1.tar.gz
-   tar -zxvf libxc-4.2.1.tar.gz
-
-Enter to the libxc source directory:
-
-::
-
-   ./configure --prefix=INSTALL/PATH/OF/LIBXC
-   make; make install
-
-Finally, you can execute ``configure.py`` script of SALMON with
-specifying the Libxc directory.
-
-Enter to SALMON directory
-
-::
-
-   configure.py --arch=ARCHITECTURE --prefix=PREFIX --with-libxc=INSTALL/PATH/OF/LIBXC
-   make; make install

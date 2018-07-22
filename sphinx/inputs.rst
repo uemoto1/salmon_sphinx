@@ -1,5 +1,6 @@
-Input Variables
-=========================================
+###########################
+Inputs
+###########################
 
 We here summarize namelists that appear in this Tutorial. A thorough
 list of the namelist variables may be found in the downloaded file in
@@ -12,7 +13,7 @@ Mandatory: none
 
 ::
 
-   &amp;units
+   &units
      unit_system='A_eV_fs'
    /
 
@@ -39,7 +40,7 @@ Mandatory: calc_mode
 
 ::
 
-   &amp;calculation
+   &calculation
      calc_mode = 'GS'
    /
 
@@ -60,7 +61,7 @@ Mandatory: none
 
 ::
 
-   &amp;control
+   &control
      sysname = 'C2H2'
    /
 
@@ -73,7 +74,7 @@ output files. If you do not specify it, the file name will start with
 
 ::
 
-   &amp;functional
+   &functional
      xc ='PZ'
    /
 
@@ -104,25 +105,28 @@ specified. If cval is set to a minus value, the mixing-parameter will be
 computed following the formula in the original paper [Phys. Rev. Lett.
 102, 226401 (2009)]. The default value for this parameter is 1.0.
 
-Since version 1.1.0, the exchange-correlation functional in Libxc
-library (http://www.tddft.org/programs/libxc/) has been available. If
-you built SALMON with Libxc, you could use ``alibxc``, ``alibx``, and
-``libc`` options to specify the functionals. For example,
+Since version 1.1.0, exchange-correlation functionals in Libxc library
+(http://www.tddft.org/programs/libxc/) have been usable in SALMON. At
+present, usable functionals are limited to LDA and GGA. For periodic
+systems, meta-GGA functionals are usable as well. To specify the
+exchange-correlation potentials of Libxc library, there are two ways. If
+the exchange and correlation potentials are given separately, you need
+to specify both ``alibx`` and ``alibc`` separately. If the exchange and
+correlation potentials are given as a combined set, you need to specify
+``alibxc``. We show below an example:
 
 ::
 
-   &amp;functional
+   &functional
    alibx = 'LDA_X'
    alibc = 'LDA_C_PZ'
    /
 
-The available set of the functionals are listed on the website
+Available sets of the functionals are listed at the website
 http://www.tddft.org/programs/libxc/functionals/ .
 
-Note that, the hybrid functionals (hybrid gga/mgga) are not supported by
-the current (version 1.1.0) of SALMON. Also, the mGGA is only available
-in the periodic system calculation. If mGGA is selected in the isolated
-system, the calculation will be stopped by the error.
+Note that, the hybrid functionals (hybrid gga/mgga) are not supported in
+the current (version 1.1.0) of SALMON.
 
 &system
 -------
@@ -133,7 +137,7 @@ Mandatory: iperiodic, al, nstate, nelem, natom
 
 ::
 
-   &amp;system
+   &system
      iperiodic = 0
      al = 16d0, 16d0, 16d0
      nstate = 5
@@ -156,7 +160,7 @@ number of atoms in the system, respectively.
 
 ::
 
-   &amp;system
+   &system
      iperiodic = 3
      al = 10.26d0,10.26d0,10.26d0
      nstate = 32
@@ -177,7 +181,7 @@ atoms in the system, respectively.
 
 ::
 
-   &amp;system
+   &system
      iperiodic = 3
      al = 10.26d0,10.26d0,10.26d0
      isym = 8
@@ -204,7 +208,7 @@ Mandatory: pseudo_file, izatom
 
 ::
 
-   &amp;pseudo
+   &pseudo
      izatom(1)=6
      izatom(2)=1
      pseudo_file(1)='C_rps.dat'
@@ -227,7 +231,7 @@ local, respectively.
 
 ::
 
-   &amp;pseudo
+   &pseudo
      izatom(1)=14
      pseudo_file(1) = './Si_rps.dat'
      lloc_ps(1)=2
@@ -248,7 +252,7 @@ separate file)
 
 ::
 
-   &amp;atomic_coor
+   &atomic_coor
      'C' 0.000000 0.000000 0.599672 1
      'H' 0.000000 0.000000 1.662257 2
      'C' 0.000000 0.000000 -0.599672 1
@@ -269,7 +273,7 @@ separate file)
 
 ::
 
-   &amp;atomic_red_coor
+   &atomic_red_coor
      'Si' .0 .0 .0 1
      'Si' .25 .25 .25 1
      'Si' .5 .0 .5 1
@@ -296,7 +300,7 @@ is adopted for C2H2 calculation (Tutorial-1).
 
 ::
 
-   &amp;rgrid
+   &rgrid
    dl = 0.25d0, 0.25d0, 0.25d0
    /
 
@@ -306,7 +310,7 @@ direction. This is adopted for crystalline Is calculation (Tutorial-4,
 
 ::
 
-   &amp;rgrid
+   &rgrid
      num_rgrid = 12,12,12
    /
 
@@ -319,7 +323,7 @@ This namelist provides grid spacing of k-space for periodic systems.
 
 ::
 
-   &amp;kgrid
+   &kgrid
    num_kgrid = 4,4,4
    /
 
@@ -333,7 +337,7 @@ calculation.
 
 ::
 
-   &amp;scf
+   &scf
      ncg = 4
      nscf = 1000
      convergence = 'norm_rho_dng'
@@ -357,7 +361,7 @@ Mandatory: none
 
 ::
 
-   &amp;hartree
+   &hartree
      meo = 3
      num_pole_xyz = 2,2,2
    /
@@ -384,7 +388,7 @@ Mandatory: dt, Nt
 
 ::
 
-   &amp;tgrid
+   &tgrid
      dt=1.25d-3
      nt=5000
    /
@@ -401,7 +405,7 @@ calculations of electron orbitals.
 
 ::
 
-   &amp;propagation
+   &propagation
      propagator='etrs'
    /
 
@@ -412,7 +416,7 @@ Rubio, Comput. Phys. Commun., 151 60
 
 ::
 
-   &amp;propagation
+   &propagation
      propagator='middlepoint'
    /
 
@@ -440,7 +444,7 @@ Mandatory: ae_shape1
 
 ::
 
-   &amp;emfield
+   &emfield
      ae_shape1 = 'impulse'
      epdir_re1 = 0.d0,0.d0,1.d0
    /
@@ -455,7 +459,7 @@ polarization in the time evolution calculation. The default is ``'tr'``.
 
 ::
 
-   &amp;emfield
+   &emfield
      trans_longi = 'tr'
      ae_shape1 = 'impulse'
      epdir_re1 = 0.,0.,1.
@@ -478,7 +482,7 @@ pulse_tw1, phi_cep1
 
 ::
 
-   &amp;emfield
+   &emfield
      ae_shape1 = 'Ecos2'
      epdir_re1 = 0.d0,0.d0,1.d0
      rlaser_int_wcm2_1 = 1.d8
@@ -540,7 +544,7 @@ systems (Tutorial-1):
 
 ::
 
-   &amp;analysis
+   &analysis
      out_psi = 'y'
      out_dns = 'y'
      out_dos = 'y'
@@ -552,7 +556,7 @@ In the time evolution calculation of isolated systems (Tutorial-3):
 
 ::
 
-   &amp;analysis
+   &analysis
      out_dns_rt = 'y'
      out_elf_rt = 'y'
      out_estatic_rt = 'y'
@@ -563,7 +567,7 @@ analysis are specified.
 
 ::
 
-   &amp;analysis
+   &analysis
      nenergy=1000
      de=0.001
    /
@@ -580,7 +584,7 @@ multiscale calculations.
 
 ::
 
-   &amp;multiscale
+   &multiscale
      fdtddim = '1D'
      twod_shape = 'periodic'
      nx_m = 4
@@ -616,7 +620,7 @@ Mandatory: none
 
 ::
 
-   &amp;parallel
+   &parallel
      nproc_ob = 1
      nproc_domain = 1,1,1
      nproc_domain_s = 1,1,1

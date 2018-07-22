@@ -1,21 +1,25 @@
-.. SALMON Manual documentation master file, created by
-   sphinx-quickstart on Thu Jul 19 09:01:52 2018.
+.. SALMON documentation master file, created by
+   sphinx-quickstart on Sun Jul 22 13:51:25 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SALMON Manual's documentation!
-=========================================
+Welcome to SALMON's documentation!
+==================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-
-
-   install_and_run.rst
-   input_variables.rst
+   :numbered:
    
-   
+   ./introduction.rst
+   ./install_and_run.rst
+   ./inputs.rst
+   ./exercises.rst
+   ./references.rst
+
+
+
+
 
 Indices and tables
 ==================
