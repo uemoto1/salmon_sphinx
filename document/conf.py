@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'SALMON'
-copyright = '2018, SALMON Developer'
-author = 'SALMON Developer'
+copyright = '2018, SALMON Developers'
+author = 'SALMON Developers'
 
 # The short X.Y version
 version = ''
@@ -130,7 +130,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'SALMON.tex', 'SALMON Documentation',
-     'SALMON Developer', 'manual'),
+     'SALMON Developers', 'manual'),
 ]
 
 
@@ -178,13 +178,3 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
-
-
-
-html_theme = "classic"
-html_theme_options = {
-    "rightsidebar": "true",
-    "relbarbgcolor": "black"
-}
-
-
