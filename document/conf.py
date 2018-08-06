@@ -178,3 +178,9 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+
+html_theme = "classic"
+html_theme_options = {
+    "rightsidebar": "true",
+    "relbarbgcolor": "black"
+}
